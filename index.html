@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Formulário Completo em HTML</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Formulário Completo em HTML</h1>
+
+    <form action="/enviar" method="post" enctype="multipart/form-data">
+      <!-- 2. Estrutura Básica de um Formulário -->
+      <!-- O formulário começa aqui com action e method -->
+
+      <!-- 3. Campos de Entrada de Texto -->
+      <!-- Campos de texto, senha e email com labels -->
+      <h2>Informações Pessoais</h2>
+
+      <label for="nome">Nome:</label>
+      <input
+        type="text"
+        id="nome"
+        name="nome"
+        placeholder="Digite seu nome"
+        required
+        maxlength="50"
+      />
+
+      <label for="email">E-mail:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="exemplo@dominio.com"
+        required
+      />
+
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" name="senha" required />
+
+      <!-- 4. Áreas de Texto -->
+      <!-- Uso da tag textarea -->
+      <label for="mensagem">Mensagem:</label>
+      <textarea
+        id="mensagem"
+        name="mensagem"
+        rows="5"
+        cols="30"
+        placeholder="Escreva sua mensagem aqui"
+      ></textarea>
+
+      <!-- 5. Botões de Opção e Caixas de Seleção -->
+      <!-- Botões de opção (radio) e caixas de seleção (checkbox) -->
+      <h2>Preferências</h2>
+
+      <p>Gênero:</p>
+      <input type="radio" id="masculino" name="genero" value="Masculino" />
+      <label for="masculino">Masculino</label>
+
+      <input type="radio" id="feminino" name="genero" value="Feminino" />
+      <label for="feminino">Feminino</label>
+
+      <input type="radio" id="outro" name="genero" value="Outro" />
+      <label for="outro">Outro</label>
+
+      <p>Interesses:</p>
+      <input type="checkbox" id="musica" name="interesses" value="Música" />
+      <label for="musica">Música</label>
+
+      <input type="checkbox" id="esporte" name="interesses" value="Esporte" />
+      <label for="esporte">Esporte</label>
+
+      <input type="checkbox" id="viagem" name="interesses" value="Viagem" />
+      <label for="viagem">Viagem</label>
+
+      <!-- 6. Listas de Seleção -->
+      <!-- Uso das tags select e option -->
+      <label for="cidade">Cidade:</label>
+      <select id="cidade" name="cidade">
+        <option value="">Selecione sua cidade</option>
+        <option value="São Paulo">São Paulo</option>
+        <option value="Rio de Janeiro">Rio de Janeiro</option>
+        <option value="Belo Horizonte">Belo Horizonte</option>
+        <option value="Curitiba">Curitiba</option>
+      </select>
+
+      <!-- 8. Atributos de Validação e Acessibilidade -->
+      <!-- Campos com validação adicional -->
+      <h2>Informações Adicionais</h2>
+
+      <label for="idade">Idade (entre 18 e 99):</label>
+      <input type="number" id="idade" name="idade" min="18" max="99" required />
+
+      <label for="telefone">Telefone:</label>
+      <input
+        type="tel"
+        id="telefone"
+        name="telefone"
+        pattern="[0-9]{2}-[0-9]{5}-[0-9]{4}"
+        placeholder="Formato: 11-91234-5678"
+        title="Formato esperado: 11-91234-5678"
+      />
+
+      <label for="site">Website:</label>
+      <input
+        type="url"
+        id="site"
+        name="site"
+        placeholder="https://www.seusite.com"
+      />
+
+      <!-- 9. Novos Tipos de Input em HTML5 -->
+      <!-- Campos de data, hora, número e cor -->
+      <label for="data_nascimento">Data de Nascimento:</label>
+      <input type="date" id="data_nascimento" name="data_nascimento" />
+
+      <label for="hora_contato">Horário Preferido para Contato:</label>
+      <input type="time" id="hora_contato" name="hora_contato" />
+
+      <label for="quantidade">Quantidade Desejada:</label>
+      <input type="number" id="quantidade" name="quantidade" min="1" max="10" />
+
+      <label for="cor_favorita">Cor Favorita:</label>
+      <input type="color" id="cor_favorita" name="cor_favorita" />
+
+      <!-- 10. Envio de Arquivos -->
+      <!-- Campo para upload de arquivos -->
+      <h2>Envio de Arquivos</h2>
+
+      <label for="arquivo">Anexar Arquivo (PDF ou DOCX):</label>
+      <input type="file" id="arquivo" name="arquivo" accept=".pdf, .docx" />
+
+      <label for="fotos">Envie suas Fotos:</label>
+      <input type="file" id="fotos" name="fotos" accept="image/*" multiple />
+
+      <!-- 7. Botões de Envio e Reset -->
+      <!-- Botões de submit e reset -->
+      <div>
+        <button type="submit">Enviar</button>
+        <button type="reset">Limpar</button>
+      </div>
+    </form>
+  </body>
+</html>
